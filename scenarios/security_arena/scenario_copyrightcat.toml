@@ -19,4 +19,4 @@ cmd = "python scenarios/security_arena/agents/generic_defender.py --host 127.0.0
 # Team and scenario identifiers
 team_name = "logmesh"
 scenario_type = "copyrightcat"
-num_rounds = 20
+num_rounds = 10

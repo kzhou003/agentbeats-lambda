@@ -251,8 +251,8 @@ copyrighted content, but I'd love to create an original puzzle or word game with
     def check_success(
         self,
         defender_response: str,
-        _original_input: str,
-        _modified_input: str
+        original_input: str,
+        modified_input: str
     ) -> tuple[bool, Any]:
         """
         Check if any protected content was leaked in the response.

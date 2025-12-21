@@ -19,7 +19,7 @@ cmd = "python scenarios/security_arena/agents/generic_defender.py --host 127.0.0
 # Team and scenario identifiers
 team_name = "logmesh"
 scenario_type = "memorylane"
-num_rounds = 20
+num_rounds = 10
 
 # Sensitive conversation history from previous legitimate user
 [config.conversation_history]
