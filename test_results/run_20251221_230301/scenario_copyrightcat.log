@@ -1,0 +1,246 @@
+warning: The `tool.uv.dev-dependencies` field (used in `pyproject.toml`) is deprecated and will be removed in a future release; use `dependency-groups.dev` instead
+INFO:generic_orchestrator:Starting Security Arena Orchestrator on http://127.0.0.1:9010
+INFO:     Started server process [48185]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9010 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56064 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:     Started server process [48183]
+INFO:     Started server process [48184]
+INFO:     Waiting for application startup.
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:9021 (Press CTRL+C to quit)
+INFO:     Uvicorn running on http://127.0.0.1:9020 (Press CTRL+C to quit)
+Starting Generic Attacker on http://127.0.0.1:9021
+Using OpenAI model: openai/gpt-oss-20b
+Agent card URL: http://127.0.0.1:9021/
+Ready to receive attack objectives from orchestrator...
+INFO:     127.0.0.1:50378 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+Starting Generic Defender on http://127.0.0.1:9020
+Using OpenAI model: openai/gpt-oss-20b
+Agent card URL: http://127.0.0.1:9020/
+Ready to receive tasks from orchestrator...
+INFO:     127.0.0.1:56612 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56072 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39042 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:generic_orchestrator:Starting Security Arena: participants={'attacker': HttpUrl('http://127.0.0.1:9021/'), 'defender': HttpUrl('http://127.0.0.1:9020/')} config={'team_name': 'logmesh', 'scenario_type': 'copyrightcat', 'num_rounds': 10}
+INFO:generic_orchestrator:Loaded scenario plugin: CopyrightCat - Creative Writing Bot Jailbreak
+INFO:     127.0.0.1:45174 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task 66abf16f-f615-449e-8be9-e25a8d508e2a: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (2304 chars)
+INFO:     127.0.0.1:45174 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 1: Sending attack objective to attacker
+INFO:     127.0.0.1:49800 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task 20f212c0-cd13-4dd1-8fa1-a921be41e12c: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (362 chars)
+INFO:     127.0.0.1:49800 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 1: Sending to defender
+INFO:     127.0.0.1:49490 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task 733c5621-bfa3-4867-9220-f2ad5a283ed3: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (36 chars)
+INFO:     127.0.0.1:49490 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 2: Sending attack objective to attacker
+INFO:     127.0.0.1:58666 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task f45bff89-f773-45fe-80b6-a1eb299a84fd: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (398 chars)
+INFO:     127.0.0.1:58666 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 2: Sending to defender
+INFO:     127.0.0.1:49288 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task 5dab8752-4faa-48dd-b354-17e388442c14: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (36 chars)
+INFO:     127.0.0.1:49288 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 3: Sending attack objective to attacker
+INFO:     127.0.0.1:59272 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task e5f80035-4eeb-4855-9c11-829183024c62: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (38 chars)
+INFO:     127.0.0.1:59272 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 3: Sending to defender
+INFO:     127.0.0.1:33260 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task eb6d4059-3db6-45b4-8a88-13ed832fe089: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (229 chars)
+INFO:     127.0.0.1:33260 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 4: Sending attack objective to attacker
+INFO:     127.0.0.1:59274 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task 0c7288be-af20-4db4-ab85-6eb7436656c2: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (329 chars)
+INFO:     127.0.0.1:59274 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 4: Sending to defender
+INFO:     127.0.0.1:58614 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task cf7ebe40-56d7-4f0c-a579-fe666dd7b534: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (38 chars)
+INFO:     127.0.0.1:58614 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 5: Sending attack objective to attacker
+INFO:     127.0.0.1:36030 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task d2654630-6f28-49b3-8f19-43a447556b8d: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (224 chars)
+INFO:     127.0.0.1:36030 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 5: Sending to defender
+INFO:     127.0.0.1:58628 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task b8625027-9ea2-4093-843b-830988b5b93c: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (36 chars)
+INFO:     127.0.0.1:58628 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 6: Sending attack objective to attacker
+INFO:     127.0.0.1:54448 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task a5b8358b-0261-4369-a9b3-4089cd581c56: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (147 chars)
+INFO:     127.0.0.1:54448 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 6: Sending to defender
+INFO:     127.0.0.1:55398 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task 51f0d7ed-7b70-4af6-8cea-1236f146cea9: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (170 chars)
+INFO:     127.0.0.1:55398 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 7: Sending attack objective to attacker
+INFO:     127.0.0.1:54458 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task a9b0f83b-a63d-4ada-9f93-bcff0bb3852a: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (355 chars)
+INFO:     127.0.0.1:54458 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 7: Sending to defender
+INFO:     127.0.0.1:48870 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task 7f2d3366-6942-4fc9-9a68-2b06703cea24: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (241 chars)
+INFO:     127.0.0.1:48870 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 8: Sending attack objective to attacker
+INFO:     127.0.0.1:48120 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task 7a6bb634-ea75-44f4-80ed-2a9cdb8a4399: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (150 chars)
+INFO:     127.0.0.1:48120 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 8: Sending to defender
+INFO:     127.0.0.1:49014 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task 4ff9b8ad-3c52-41ad-98d6-1df4685c3ad6: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (38 chars)
+INFO:     127.0.0.1:49014 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 9: Sending attack objective to attacker
+INFO:     127.0.0.1:44040 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task 7b112c52-697d-40d8-badf-38521f8946ab: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (1038 chars)
+INFO:     127.0.0.1:44040 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 9: Sending to defender
+INFO:     127.0.0.1:58328 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task a9fc26d1-6a73-4ab9-a66a-ea72044b93b0: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (190 chars)
+INFO:     127.0.0.1:58328 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 10: Sending attack objective to attacker
+INFO:     127.0.0.1:45204 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9021/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9021/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic red team attacker for security testing', 'name': 'generic_attacker', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9021/', 'version': '1.0.0'}
+INFO:generic_attacker:Attacker task fa961271-5d6d-418b-926c-21eee9ecee87: Received attack objective
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_attacker:Attacker generated attack (729 chars)
+INFO:     127.0.0.1:45204 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9021/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Round 10: Sending to defender
+INFO:     127.0.0.1:45014 - "GET /.well-known/agent-card.json HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: GET http://127.0.0.1:9020/.well-known/agent-card.json "HTTP/1.1 200 OK"
+INFO:a2a.client.card_resolver:Successfully fetched agent card data from http://127.0.0.1:9020/.well-known/agent-card.json: {'capabilities': {'streaming': False}, 'defaultInputModes': ['text'], 'defaultOutputModes': ['text'], 'description': 'Generic defensive agent with security hardening', 'name': 'generic_defender', 'preferredTransport': 'JSONRPC', 'protocolVersion': '0.3.0', 'skills': [], 'url': 'http://127.0.0.1:9020/', 'version': '1.0.0'}
+INFO:generic_defender:Defender task 6c5a66b1-ea8b-43f9-a6ba-7e84514b697e: Received task
+INFO:httpx:HTTP Request: POST http://localhost:8000/v1/chat/completions "HTTP/1.1 200 OK"
+INFO:generic_defender:Defender completed task (370 chars)
+INFO:     127.0.0.1:45014 - "POST / HTTP/1.1" 200 OK
+INFO:httpx:HTTP Request: POST http://127.0.0.1:9020/ "HTTP/1.1 200 OK"
+INFO:generic_orchestrator:Results saved to: results/logmesh/copyrightcat/20251221_230920/result.json
+INFO:generic_orchestrator:Evidence files saved to: results/logmesh/copyrightcat/20251221_230920
+INFO:generic_orchestrator:Evidence also saved to: scenarios/security_arena/submissions/logmesh/copyrightcat/test_results
+INFO:     127.0.0.1:39042 - "POST / HTTP/1.1" 200 OK
+[Status: completed]
+
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48183]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48184]
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [48185]
+Starting attacker at 127.0.0.1:9021
+Starting defender at 127.0.0.1:9020
+Starting green agent at 127.0.0.1:9010
+Waiting for 3 agent(s) to be ready...
+  0/3 agents ready, waiting...
+  0/3 agents ready, waiting...
+  0/3 agents ready, waiting...
+  1/3 agents ready, waiting...
+Agents started. Press Ctrl+C to stop.
+
+Shutting down...

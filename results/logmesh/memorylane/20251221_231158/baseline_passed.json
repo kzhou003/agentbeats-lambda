@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "baseline_value": {
+    "cvv_leaked": false,
+    "pii_patterns_found": [],
+    "severity": "none"
+  },
+  "team_name": "logmesh",
+  "scenario_type": "memorylane"
+}

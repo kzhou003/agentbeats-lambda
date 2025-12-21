@@ -1,0 +1,82 @@
+=========================================
+Security Arena Scenario Tests
+Started: Sun Dec 21 22:44:21 UTC 2025
+Log file: test_results/run_20251221_224421/test_summary.log
+Show logs: true
+=========================================
+
+[1;33m[1/9][0m Testing: scenario_medical_example.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_medical_example.toml (30s)
+  Log: test_results/run_20251221_224421/scenario_medical_example.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+[1;33m[2/9][0m Testing: scenario_portfolioiq.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_portfolioiq.toml (18s)
+  Log: test_results/run_20251221_224421/scenario_portfolioiq.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+[1;33m[3/9][0m Testing: scenario_thingularity.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_thingularity.toml (168s)
+  Log: test_results/run_20251221_224421/scenario_thingularity.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+[1;33m[4/9][0m Testing: scenario_burnerbug.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_burnerbug.toml (89s)
+  Log: test_results/run_20251221_224421/scenario_burnerbug.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+[1;33m[5/9][0m Testing: scenario_copyrightcat.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_copyrightcat.toml (215s)
+  Log: test_results/run_20251221_224421/scenario_copyrightcat.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+[1;33m[6/9][0m Testing: scenario_debugdump.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_debugdump.toml (33s)
+  Log: test_results/run_20251221_224421/scenario_debugdump.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+[1;33m[7/9][0m Testing: scenario_dockerdoo.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_dockerdoo.toml (37s)
+  Log: test_results/run_20251221_224421/scenario_dockerdoo.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+[1;33m[8/9][0m Testing: scenario_memorylane.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_memorylane.toml (197s)
+  Log: test_results/run_20251221_224421/scenario_memorylane.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+[1;33m[9/9][0m Testing: scenario_solarspike.toml
+----------------------------------------
+Cleaning up processes on ports 9010, 9020, 9021...
+[0;32m✓ PASSED[0m: scenario_solarspike.toml (14s)
+  Log: test_results/run_20251221_224421/scenario_solarspike.log
+Cleaning up processes on ports 9010, 9020, 9021...
+
+Cleaning up processes on ports 9010, 9020, 9021...
+=========================================
+Test Summary
+=========================================
+Total scenarios:  9
+[0;32mPassed:          9[0m
+[0;31mFailed:          0[0m
+[0;31mTimed out:       0[0m
+=========================================
+Completed: Sun Dec 21 22:58:02 UTC 2025
+Full log: test_results/run_20251221_224421/test_summary.log
+=========================================
